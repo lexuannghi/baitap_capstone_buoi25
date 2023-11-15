@@ -7,8 +7,8 @@ $color_6: #fc0303;
 $color_7: #fffcfc;
 $color_8: #fff8f8;
 $color_9: #f50e0e;
-$font-family_1: "roboto";
-$font-family_2: "roboto";
+$font-family_1: "Inter";
+$font-family_2: "Inter";
 * {
   font-family: $font-family_1;
   font-style: normal;
@@ -69,6 +69,17 @@ $font-family_2: "roboto";
   background: url(./cart.png) no-repeat;
   width: 45px;
   height: 30px;
+  color: $color_1;
+  position: absolute;
+  span {
+    position: relative;
+    top: -10px;
+    right: 0;
+    padding: 1px 3px;
+    border-radius: 10px;
+    background-color: $color_6;
+    font-weight: bold;
+  }
 }
 .header-left {
   float: left;
@@ -83,8 +94,7 @@ $font-family_2: "roboto";
     a {
       font-style: normal;
       font-weight: 400;
-      font-size: 30px;
-      line-height: 24px;
+      font-size: 20px;
       color: $color_2;
       padding: 20px 14px;
     }
@@ -97,6 +107,9 @@ $font-family_2: "roboto";
   left: 70px;
   top: 153px;
   background: #f8f8f8;
+}
+.display-4 {
+  font-size: 40px !important;
 }
 .card-img-top {
   position: absolute;
@@ -120,7 +133,7 @@ $font-family_2: "roboto";
   height: 64px;
   left: 174px;
   top: 305px;
-  padding: 12px;
+  padding: 20px;
   background: #dedddc;
 }
 .text-white {
@@ -137,13 +150,12 @@ $font-family_2: "roboto";
 }
 .card-title {
   position: absolute;
-  width: 185px;
+  width: 260px;
   height: 29px;
   left: 23px;
   top: 231px;
   font-weight: 300;
   font-size: 24px;
-  line-height: 29px;
   color: $color_2;
 }
 .card-text {
@@ -264,4 +276,7 @@ $font-family_2: "roboto";
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.detail-img {
+  height: 400px !important;
 }

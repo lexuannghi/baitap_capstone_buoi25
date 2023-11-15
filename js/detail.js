@@ -105,3 +105,40 @@ window.onload = function () {
     },
   });
 };
+var quantityDisplay = document.getElementById("quantity-display");
+
+// Hàm tăng số
+function increaseQuantity() {
+  var currentQuantity = parseInt(quantityDisplay.innerHTML);
+  quantityDisplay.innerHTML = currentQuantity + 1;
+}
+
+// Hàm giảm số
+function decreaseQuantity() {
+  var currentQuantity = parseInt(quantityDisplay.innerHTML);
+  if (currentQuantity > 1) {
+    quantityDisplay.innerHTML = currentQuantity - 1;
+  }
+}
+var quantityDisplay = document.getElementById("quantity-display");
+var cartCountDisplay = document.getElementById("cart-count");
+
+function increaseQuantity() {
+  var currentQuantity = parseInt(quantityDisplay.innerHTML);
+  quantityDisplay.innerHTML = currentQuantity + 1;
+}
+
+function decreaseQuantity() {
+  var currentQuantity = parseInt(quantityDisplay.innerHTML);
+  if (currentQuantity > 1) {
+    quantityDisplay.innerHTML = currentQuantity - 1;
+  }
+}
+
+function addToCart() {
+  var currentQuantity = parseInt(quantityDisplay.innerHTML);
+  var currentCartCount = parseInt(cartCountDisplay.innerHTML);
+
+  // Cập nhật số lượng trong giỏ hàng
+  cartCountDisplay.innerHTML = currentCartCount + currentQuantity;
+}

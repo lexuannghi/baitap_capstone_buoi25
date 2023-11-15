@@ -8,6 +8,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/sass.css" >
   </head>
   <body>
@@ -19,9 +25,10 @@
           <div class="header-right">
             <a href="#contact" class="login">Login</a>
             <a href="register.html" class="register">Register</a>
-            <a href="#home" class="cart-logo">
-              <img src="asset/cart.png" />
-            </a>
+            <a href="register.html" class="cart-logo text-center" id="cart-link">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-number" id="cart-count">0</span>
+          </a>
           </div>
         </div>
        
@@ -49,18 +56,18 @@
                 </div>
                 <p class="price-detail"></p>
                 <div class="quantity">
-                    <div class="rectangle-4">
-                        <button class="quantity-up">+</button>
-                    </div>
-                    <div class="rectangle-4">
-                        <button class="quantity-num">1</button>
-                    </div>
-                    <div class="rectangle-4">
-                        <button class="quantity-down">-</button>
-                    </div>
-                </div>
+                  <div class="rectangle-4">
+                      <button class="quantity-up" onclick="increaseQuantity()">+</button>
+                  </div>
+                  <div class="rectangle-4">
+                      <button class="quantity-num" id="quantity-display">1</button>
+                  </div>
+                  <div class="rectangle-4">
+                      <button class="quantity-down" onclick="decreaseQuantity()">-</button>
+                  </div>
+              </div>
                 <div class="add-cart">
-                    <button class="btn-add">Add to cart</button>
+                    <button class="btn-add" onclick="addToCart()">Add to cart</button>
                 </div>
             </div>
         </div>

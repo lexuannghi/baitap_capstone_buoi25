@@ -1,5 +1,5 @@
 * {
-  font-family: "roboto";
+  font-family: "Inter";
   font-style: normal;
 }
 
@@ -25,7 +25,7 @@
   height: 32px;
   left: 1105px;
   top: 14px;
-  font-family: "roboto";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -40,7 +40,7 @@
   height: 32px;
   left: 1170px;
   top: 15px;
-  font-family: "roboto";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -64,6 +64,17 @@
   background: url(./cart.png) no-repeat;
   width: 45px;
   height: 30px;
+  color: #f7f7f7;
+  position: absolute;
+}
+.cart-logo span {
+  position: relative;
+  top: -10px;
+  right: 0;
+  padding: 1px 3px;
+  border-radius: 10px;
+  background-color: #fc0303;
+  font-weight: bold;
 }
 
 .header-left {
@@ -80,8 +91,7 @@
 .menu .header-left a {
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 24px;
+  font-size: 20px;
   color: #000000;
   padding: 20px 14px;
 }
@@ -93,6 +103,10 @@
   left: 70px;
   top: 153px;
   background: #f8f8f8;
+}
+
+.display-4 {
+  font-size: 40px !important;
 }
 
 .card-img-top {
@@ -119,7 +133,7 @@
   height: 64px;
   left: 174px;
   top: 305px;
-  padding: 12px;
+  padding: 20px;
   background: #dedddc;
 }
 
@@ -139,13 +153,12 @@
 
 .card-title {
   position: absolute;
-  width: 185px;
+  width: 260px;
   height: 29px;
   left: 23px;
   top: 231px;
   font-weight: 300;
   font-size: 24px;
-  line-height: 29px;
   color: #000000;
 }
 
@@ -199,7 +212,7 @@
   height: 47px;
   left: 527px;
   top: 317px;
-  font-family: "roboto";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -213,7 +226,7 @@
 }
 
 .quantity-num {
-  font-family: "roboto";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -227,7 +240,7 @@
 }
 
 .quantity-down {
-  font-family: "roboto";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -241,7 +254,7 @@
 }
 
 .quantity-up {
-  font-family: "roboto";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -274,9 +287,13 @@
 .error {
   flex-shrink: 0;
   color: #f50e0e;
-  font-family: "roboto";
+  font-family: "Inter";
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.detail-img {
+  height: 400px !important;
 }/*# sourceMappingURL=sass.css.map */
