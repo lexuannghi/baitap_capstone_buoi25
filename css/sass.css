@@ -3,6 +3,11 @@
   font-style: normal;
 }
 
+.container_f {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .header {
   box-sizing: border-box;
   position: relative;
@@ -20,8 +25,13 @@
   position: static;
 }
 
+a:hover {
+  text-decoration: none !important;
+  color: #f7f7f7;
+}
+
 .login {
-  width: 91px;
+  width: 50px;
   height: 32px;
   left: 1105px;
   top: 14px;
@@ -36,7 +46,7 @@
 }
 
 .register {
-  width: 90px;
+  width: 70px;
   height: 32px;
   left: 1170px;
   top: 15px;
@@ -48,6 +58,30 @@
   color: #f7f7f7;
   border: 1px solid #000000;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.line {
+  display: inline-block;
+  position: relative;
+}
+
+.line:after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: #888888;
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transition-duration: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+}
+
+.line:hover:after {
+  width: 100%;
+  left: 0;
+  transition-duration: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
 }
 
 .image-header {
@@ -62,7 +96,7 @@
 
 .cart-logo {
   background: url(./cart.png) no-repeat;
-  width: 45px;
+  width: 55px;
   height: 30px;
   color: #f7f7f7;
   position: absolute;
@@ -71,7 +105,7 @@
   position: relative;
   top: -10px;
   right: 0;
-  padding: 1px 3px;
+  padding: 0 4px;
   border-radius: 10px;
   background-color: #fc0303;
   font-weight: bold;
@@ -96,17 +130,34 @@
   padding: 20px 14px;
 }
 
+.banner {
+  width: 100%;
+}
+.banner .bg-banner {
+  background-image: url(./../asset/image4.png);
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 .card {
   margin: 20px;
-  width: 307px;
+  width: 340px;
   height: 369px;
   left: 70px;
-  top: 153px;
+  top: 0;
   background: #f8f8f8;
+}
+
+#lstProduct {
+  width: 100% !important;
+  margin: 0 !important;
 }
 
 .display-4 {
   font-size: 40px !important;
+  padding-top: 15px;
 }
 
 .card-img-top {
@@ -129,7 +180,7 @@
 
 .rectangle-3 {
   position: absolute;
-  width: 132px;
+  width: 165px;
   height: 64px;
   left: 174px;
   top: 305px;
@@ -207,16 +258,18 @@
   border-radius: 10px;
 }
 
-.price-detail {
+.price-num {
+  padding: 10px 0;
+}
+.price-num .price-detail {
   width: 113px;
   height: 47px;
-  left: 527px;
-  top: 317px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
-  color: #fc0303;
+  color: red;
+  margin: 0;
 }
 
 .quantity {

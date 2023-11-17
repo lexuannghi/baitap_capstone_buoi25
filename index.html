@@ -33,14 +33,14 @@
     <link rel="stylesheet" href="./css/sass.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container_f">
       <div class="header">
         <a href="#default" class="image-header">
           <img src="./asset/logo.png" alt="" />
         </a>
         <div class="header-right">
-          <a href="#contact" class="login">Login</a>
-          <a href="register.html" class="register">Register</a>
+          <a href="#contact" class="login"><span class="line">Login</span></a>
+          <a href="register.html" class="register"><span class="line">Register</span></a>
           <a href="register.html" class="cart-logo text-center" id="cart-link">
             <i class="fa-solid fa-cart-shopping"></i>
             <span class="cart-number" id="cart-count">0</span>
@@ -50,53 +50,45 @@
 
       <div class="menu">
         <div class="header-left">
-          <a href="index.html">Home</a>
-          <a href="#about">Men</a>
-          <a href="#home">Woman</a>
-          <a href="#home">Kid</a>
-          <a href="#home">Sport</a>
+          <a href="index.html"><span class="line">Home</span></a>
+          <a href="#about"><span class="line">Men</span></a>
+          <a href="#home"><span class="line">Woman</span></a>
+          <a href="#home"><span class="line">Kid</span></a>
+          <a href="#home"><span class="line">Sport</span></a>
         </div>
       </div>
-      <div class="row">
-        <img src="./asset/Carousel.png" alt="" />
+    </div>
+    <div class="container_f">
+      <div class="banner">
+        <div class="bg-banner">
+          <div class="row">
+            <div class="col-5">
+              <div class="my_carousel">
+                <div class="item_carousel">
+                  <div class="carousel_bg">
+                    <img src="./asset/image6.png" alt="" />
+                  </div>
+                </div>
+                <div class="item_carousel">
+                  <div class="carousel_bg">
+                    <img src="./asset/image6.png" alt="" />
+                  </div>
+                </div>
+                <div class="item_carousel">
+                  <div class="carousel_bg">
+                    <img src="./asset/image6.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <!-- <div class="my_carousel">
-        <div class="item_carousel">
-          <div class="carousel_bg">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="item_carousel">
-          <div class="carousel_bg">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="item_carousel">
-          <div class="carousel_bg">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="item_carousel">
-          <div class="carousel_bg">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="item_carousel">
-          <div class="carousel_bg">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-        <div class="item_carousel">
-          <div class="carousel_bg">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-      </div> -->
-
+    </div>
+    <div class="container_f">
       <div class="display-4 text-center">-Product list-</div>
-      <div class="row" id="lstProduct" style="margin-top: -150px"></div>
-      <div class="row" style="margin-top: 150px">
+      <div class="row" id="lstProduct"></div>
+      <div class="row">
         <img src="./asset/image7.png" alt="" />
       </div>
     </div>
@@ -131,13 +123,13 @@
     <script>
       $(document).ready(function () {
         $(".my_carousel").slick({
-          slidesToShow: 5,
+          slidesToShow: 1,
           infinite: true,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           autoplay: true,
           autoplaySpeed: 3000,
           speed: 400,
-          dots: true,
+          dots: false,
           arrows: false,
         });
       });

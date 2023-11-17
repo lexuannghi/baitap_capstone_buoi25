@@ -7,12 +7,18 @@ $color_6: #fc0303;
 $color_7: #fffcfc;
 $color_8: #fff8f8;
 $color_9: #f50e0e;
+$color_10: #888888;
 $font-family_1: "Inter";
 $font-family_2: "Inter";
 * {
   font-family: $font-family_1;
   font-style: normal;
 }
+.container_f {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .header {
   box-sizing: border-box;
   position: relative;
@@ -28,8 +34,12 @@ $font-family_2: "Inter";
     position: static;
   }
 }
+a:hover {
+  text-decoration: none !important;
+  color: $color_1;
+}
 .login {
-  width: 91px;
+  width: 50px;
   height: 32px;
   left: 1105px;
   top: 14px;
@@ -43,7 +53,7 @@ $font-family_2: "Inter";
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .register {
-  width: 90px;
+  width: 70px;
   height: 32px;
   left: 1170px;
   top: 15px;
@@ -56,6 +66,30 @@ $font-family_2: "Inter";
   border: 1px solid #000000;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.line {
+  display: inline-block;
+  position: relative;
+}
+
+.line:after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background-color: $color_10;
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transition-duration: .2s ease-in-out;
+	-webkit-transition: .2s ease-in-out;
+}
+
+.line:hover:after {
+  width: 100%;
+  left: 0;
+  transition-duration: .2s ease-in-out;
+	-webkit-transition: .2s ease-in-out;
+}
+
 .image-header {
   position: absolute;
   left: 24px;
@@ -67,7 +101,7 @@ $font-family_2: "Inter";
 }
 .cart-logo {
   background: url(./cart.png) no-repeat;
-  width: 45px;
+  width: 55px;
   height: 30px;
   color: $color_1;
   position: absolute;
@@ -75,7 +109,7 @@ $font-family_2: "Inter";
     position: relative;
     top: -10px;
     right: 0;
-    padding: 1px 3px;
+    padding: 0 4px;
     border-radius: 10px;
     background-color: $color_6;
     font-weight: bold;
@@ -100,16 +134,32 @@ $font-family_2: "Inter";
     }
   }
 }
+.banner {
+  width: 100%;
+  .bg-banner {
+    background-image: url(./../asset/image4.png);
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
 .card {
   margin: 20px;
-  width: 307px;
+  width: 340px;
   height: 369px;
   left: 70px;
-  top: 153px;
+  top: 0;
   background: #f8f8f8;
+}
+#lstProduct {
+  width: 100% !important;
+  margin: 0 !important;
 }
 .display-4 {
   font-size: 40px !important;
+  padding-top: 15px;
 }
 .card-img-top {
   position: absolute;
@@ -129,7 +179,7 @@ $font-family_2: "Inter";
 }
 .rectangle-3 {
   position: absolute;
-  width: 132px;
+  width: 165px;
   height: 64px;
   left: 174px;
   top: 305px;
@@ -198,17 +248,20 @@ $font-family_2: "Inter";
   margin-right: 10px;
   border-radius: 10px;
 }
-.price-detail {
+.price-num {
+  padding: 10px 0;
+  .price-detail {
   width: 113px;
   height: 47px;
-  left: 527px;
-  top: 317px;
   font-family: $font-family_1;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
-  color: $color_6;
+  color: red;
+  margin: 0;
 }
+}
+
 .quantity {
   width: 110px;
   height: 50px;

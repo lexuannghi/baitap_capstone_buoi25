@@ -92,7 +92,7 @@ window.onload = function () {
       $(".name").text(data.content.name);
       $(".shortDescription").text(data.content.shortDescription);
       $(".detail-img").attr("src", data.content.image);
-      $(".price-detail").attr("src", data.content.price + "$");
+      $(".price-detail").text(data.content.price + "$"); 
 
       var html = "";
       $.each(data.content.size, function (i, item) {
@@ -105,34 +105,23 @@ window.onload = function () {
     },
   });
 };
-var quantityDisplay = document.getElementById("quantity-display");
 
-// Hàm tăng số
-function increaseQuantity() {
-  var currentQuantity = parseInt(quantityDisplay.innerHTML);
-  quantityDisplay.innerHTML = currentQuantity + 1;
-}
-
-// Hàm giảm số
-function decreaseQuantity() {
-  var currentQuantity = parseInt(quantityDisplay.innerHTML);
-  if (currentQuantity > 1) {
-    quantityDisplay.innerHTML = currentQuantity - 1;
-  }
-}
 var quantityDisplay = document.getElementById("quantity-display");
 var cartCountDisplay = document.getElementById("cart-count");
 
-function increaseQuantity() {
+function updateQuantity(delta) {
   var currentQuantity = parseInt(quantityDisplay.innerHTML);
-  quantityDisplay.innerHTML = currentQuantity + 1;
+  var newQuantity = Math.max(currentQuantity + delta, 1);
+  quantityDisplay.innerHTML = newQuantity;
+  updateTotalPrice(); // Cập nhật giá tiền sau khi thay đổi số lượng
+}
+
+function increaseQuantity() {
+  updateQuantity(1);
 }
 
 function decreaseQuantity() {
-  var currentQuantity = parseInt(quantityDisplay.innerHTML);
-  if (currentQuantity > 1) {
-    quantityDisplay.innerHTML = currentQuantity - 1;
-  }
+  updateQuantity(-1);
 }
 
 function addToCart() {
@@ -142,3 +131,9 @@ function addToCart() {
   // Cập nhật số lượng trong giỏ hàng
   cartCountDisplay.innerHTML = currentCartCount + currentQuantity;
 }
+
+
+
+
+
+
