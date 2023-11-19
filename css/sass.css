@@ -140,6 +140,27 @@ a:hover {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+.banner .bg-banner .text-banner {
+  margin-left: 230px;
+  margin-top: 60px;
+  font-family: "Inter";
+}
+.banner .bg-banner .text-banner h2 {
+  font-size: 40px;
+}
+.banner .bg-banner .text-banner p {
+  font-size: 20px;
+  line-height: 10px;
+}
+.banner .bg-banner .text-banner button {
+  width: 150px;
+  height: 50px;
+  background-color: #F8B653;
+  color: #f7f7f7;
+  font-family: "Inter";
+  font-weight: 300;
+  border: none;
+}
 
 .card {
   margin: 20px;

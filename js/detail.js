@@ -52,7 +52,7 @@ window.onload = function () {
           '<div class="rectangle rectangle-2 text-center">' +
           '<a href="./detail.html?productid=' +
           item.id +
-          '" class="text-white">Buy now</a>' +
+          '" class="text-white line">Buy now</a>' +
           "</div>" +
           '<div class="rectangle rectangle-3 text-right">' +
           '<p class="price">' +
@@ -92,7 +92,7 @@ window.onload = function () {
       $(".name").text(data.content.name);
       $(".shortDescription").text(data.content.shortDescription);
       $(".detail-img").attr("src", data.content.image);
-      $(".price-detail").text(data.content.price + "$"); 
+      $(".price-detail").text(data.content.price + "$");
 
       var html = "";
       $.each(data.content.size, function (i, item) {
@@ -131,9 +131,3 @@ function addToCart() {
   // Cập nhật số lượng trong giỏ hàng
   cartCountDisplay.innerHTML = currentCartCount + currentQuantity;
 }
-
-
-
-
-
-

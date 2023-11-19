@@ -8,6 +8,8 @@ $color_7: #fffcfc;
 $color_8: #fff8f8;
 $color_9: #f50e0e;
 $color_10: #888888;
+$color_11: #F8B653;
+
 $font-family_1: "Inter";
 $font-family_2: "Inter";
 * {
@@ -72,22 +74,22 @@ a:hover {
 }
 
 .line:after {
-  content: '';
+  content: "";
   width: 0;
   height: 3px;
   background-color: $color_10;
   position: absolute;
   bottom: -4px;
   left: 50%;
-  transition-duration: .2s ease-in-out;
-	-webkit-transition: .2s ease-in-out;
+  transition-duration: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
 }
 
 .line:hover:after {
   width: 100%;
   left: 0;
-  transition-duration: .2s ease-in-out;
-	-webkit-transition: .2s ease-in-out;
+  transition-duration: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
 }
 
 .image-header {
@@ -142,6 +144,27 @@ a:hover {
     height: auto;
     background-repeat: no-repeat;
     background-size: 100%;
+    .text-banner {
+      margin-left: 230px;
+      margin-top: 60px;
+      font-family: $font-family_1;
+      h2 {
+        font-size: 40px;
+      }
+      p{
+        font-size: 20px;
+        line-height: 10px;
+      }
+      button {
+        width: 150px;
+        height: 50px;
+        background-color: $color_11;
+        color: $color_1;
+        font-family: $font-family_2;
+        font-weight: 300;
+        border: none;
+      }
+    }
   }
 }
 
@@ -251,15 +274,15 @@ a:hover {
 .price-num {
   padding: 10px 0;
   .price-detail {
-  width: 113px;
-  height: 47px;
-  font-family: $font-family_1;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 30px;
-  color: red;
-  margin: 0;
-}
+    width: 113px;
+    height: 47px;
+    font-family: $font-family_1;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    color: red;
+    margin: 0;
+  }
 }
 
 .quantity {
